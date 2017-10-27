@@ -1,0 +1,40 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h2{
+   margin-left: -75px;
+}
+.logobox{
+    margin-left: -115px;
+    height: 45px;
+    width: 120%;
+    background-color:#2d6a90;
+    border-bottom: 2px solid #dddddd;
+}
+.todolistlabel{
+    margin-left: -50px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Graphic Web',Arial, Helvetica, sans-serif;
+    color:#2d6a90;
+}
+.todolistline{
+    margin-left: -70px;
+    width: 110%;
+}
+.btn{
+    background-color: #85c37f;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+.btn:hover{
+    color: #ffffff;
+    transition: all 0.5s;
+    background-color: #52854e;
+}
+.container1{
+ padding: 10px;
+ border: 1px solid black;
+}
