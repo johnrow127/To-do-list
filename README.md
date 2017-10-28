@@ -1,1 +1,1 @@
-Sample repo for intern technical exam
+First Try Sample repo for intern technical exam
