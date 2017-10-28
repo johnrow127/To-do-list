@@ -1,1 +1,1 @@
-2nd Attempt Sample repo for intern technical exam
+Sample Repo
