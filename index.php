@@ -4,23 +4,19 @@
 <link rel="stylesheet" href="css/index.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>PRIMEnote | The best way to take notes.</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>PRIMEnote | The best app to make notes</title>
 </head>
 
-<body>
+<body>   
 <header>
-<img src="img/logo.png" width="150px" class="logoicon"><div class="logo">PRIMEnote.</div>
-<div class="content">
-<div class="qoute">The best way to take note<br>your to do list.</div>
-<br>
-<div class="qoute1">Millions of people rely on PRIMEnote to get things done.</div>
-<br>
-<br>
-<div class="container">
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="signupbtn " data-toggle="modal" data-target="#myModal">Click Here to Signup</button>
+
+ <img src="img/logo.png" width="150px" class="logoposition"><div class="logo">| PRIMEnote.</div>
+ <div class="content">
+  <p class="qoute">The best way to take note<br>your to do list.</p>
+  <p class="qoute1">Millions of people rely on PRIMEnote to get things done.</p>
+  <button type="button" class="signupbtn " data-toggle="modal" data-target="#myModal">Click here to Sign Up</button>
 
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -29,42 +25,42 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Log in!</h4>
+          <button type="button" class="close-btn" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Sign Up to our PRIMENOTE.</h3>
+          <h5 class="modal-title1">And get Instant access to our Resources!</h5>
         </div>
         <div class="modal-body">
         <form action='#' method='post'>
-          Username:<input type='text' name='username' required><br>
-          First Name:<input type='text' name='fname' required><br>
-          Middle Name:<input type='text' name='minit' required><br>
-          Last Name:<input type='text' name='lname' required><br>
-          Password:<input type='password' name='password' required><br>
-        <input type='submit' name='SignUp' value='Login'>
+          <div class="modal-txt">
+          <input type='text' class="signupusertxtbox" name='username' placeholder="&#9993; Username" required><br>
+          <input type='text' class="signupfirsttxtbox" name='fname' placeholder="&#9432; FirstName" required><br>
+          <input type='text' class="signupmiddletxtbox" name='minit' placeholder="&#9432; MiddleName" required><br>
+          <input type='text' class="signuplasttxtbox" name='lname' placeholder="&#9432; LastName" required><br>
+          <input type='password' class="signuppasstxtbox" name='password' placeholder="&#9919; Password" required><br>
+   
+        <input type='submit' class="modalsignupbtn" name='SignUp' value='Create Account &#9112;'> or |
+        <input type='submit' class="modalsignupbtn1" name='SignUp' value='Sign Up with facebook'>
         </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
-      </div>
-      
-    </div>
+        <div class="modal-footer">
+          <p>By clicking Create Account, you agree to our Terms and that you have read our Data Policy, including our Cookie Use.</p>
+        </div>
+      </div> 
+    </div> 
+</div>
+ 
+  <div class="content1">
+  <p class="logintitle">Login to your notes.</p>
+  <form action='#' method='post'>
+  <div class="usertxtboxicon">&#128231;<input type="text" name="user" class="usertxtbox" placeholder="| Email"></div>
+  <br>
+  <div class="passtxtboxicon">&#128272;<input type="password" name="pass" class="passtxtbox" placeholder="| Password"></div>
+  <br>
+  <input type="submit" name='Submit' class="login-btn" value="Login">
+  </form>
   </div>
-  
-</div>
-
-<br>
-<div class="loginform">
-<div class="loginlabel">Login to your note.</div>
-
-<form action='#' method='post'>
-<div class="usericon">&#128231;<input type="text" placeholder="| Username" name='user' required></div>
-<br>
-<div class="passicon">&#128272;<input type="password" placeholder="| Password" name='pass' required></div>
-<br>
-<input type='submit' class="loginbtn" name='Submit' value='Login'>
-</form>
-</div>
-</div>
+ </div>
 </header>
 
 <?php
@@ -84,7 +80,7 @@ if (isset($_POST["Submit"])) {
    $_SESSION['login'] = true;
    header("Location:main/Todolist.php");
     }else{
-   echo "Invalid Username or Password";
+   echo "<div class='loginvalidation'>&#9432; Invalid Username or Password</div>";
    }
 }
 
@@ -98,4 +94,6 @@ mysqli_query($con,"INSERT INTO `account`(`Username`, `Password`, `Fname`, `Minit
 }
 ?>
 </body>
+
+
 </html>
